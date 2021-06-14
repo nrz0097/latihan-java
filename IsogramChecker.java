@@ -1,9 +1,7 @@
 class IsogramChecker {
 
     boolean isIsogram(String phrase) {
-        phrase = phrase.toLowerCase();
-        phrase = phrase.replace("-", "");
-        phrase = phrase.replace(" ", "");
+        phrase = phrase.toLowerCase().replaceAll("[ -]", "");
         char[] kata = phrase.toCharArray();
         String result = null;
         for(int i = 0; i < kata.length; i++){
